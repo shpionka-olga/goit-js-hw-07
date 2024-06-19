@@ -35,11 +35,10 @@ const createHandler = (event) => {
   }
   input.value = input.defaultValue;
 }
+createBtn.addEventListener("click", createHandler);
 
 // Destroy button click actions
-createBtn.addEventListener("click", createHandler);
 const destroyBtn = document.querySelector('button[data-destroy]');
-
 const destroyHandler = (event) => {
   destroyBoxes();
   const input = document.querySelector("input");

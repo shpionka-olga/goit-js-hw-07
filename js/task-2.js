@@ -31,7 +31,7 @@ const addImages = () => {
   const widthImage = 360;
   const heightImage = 300;
 
-  const markup = images
+  const galleryHTML = images
     .map((image) => `<li class="list-item-image"><img src=${image.url} alt=${image.alt} width=${widthImage} height=${heightImage}></li>`)
     .join(" ");
 
@@ -43,7 +43,7 @@ const addImages = () => {
   listGallery.style.alignItems = "center";
   listGallery.style.justifyContent = "center";
 
-  listGallery.insertAdjacentHTML("beforeend", markup);
+  listGallery.insertAdjacentHTML("beforeend", galleryHTML);
 
   // const itemImage = document.querySelector(".list-item-image");
   // itemImage.style.flexWidth = "((100% - 24px*2)/3)";
